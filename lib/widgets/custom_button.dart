@@ -111,6 +111,8 @@ class CustomButton extends StatelessWidget {
     switch (variant) {
       case ButtonVariant.FillBluegray900:
         return ColorConstant.blueGray900;
+      case ButtonVariant.FillWhiteA700:
+        return ColorConstant.whiteA700;
       default:
         return ColorConstant.indigoA200;
     }
@@ -134,6 +136,15 @@ class CustomButton extends StatelessWidget {
       case ButtonFontStyle.ManropeSemiBold14Gray600:
         return TextStyle(
           color: ColorConstant.gray600,
+          fontSize: getFontSize(
+            14,
+          ),
+          fontFamily: 'Manrope',
+          fontWeight: FontWeight.w600,
+        );
+      case ButtonFontStyle.ManropeSemiBold14IndigoA200:
+        return TextStyle(
+          color: ColorConstant.indigoA200,
           fontSize: getFontSize(
             14,
           ),
@@ -165,9 +176,11 @@ enum ButtonPadding {
 enum ButtonVariant {
   FillIndigoA200,
   FillBluegray900,
+  FillWhiteA700,
 }
 
 enum ButtonFontStyle {
   ManropeSemiBold14,
   ManropeSemiBold14Gray600,
+  ManropeSemiBold14IndigoA200,
 }
