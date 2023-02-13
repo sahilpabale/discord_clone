@@ -18,6 +18,7 @@
 - [System Requirements](#system-requirements)
 - [Figma design guidelines for better accuracy](#figma-design-guideline-for-better-accuracy)
 - [App Navigations](#app-navigations)
+- [Google Authentication Configuration](#google-authentication-configuration)
 - [Project Structure](#project-structure)
 - [How you can do code formatting?](#how-you-can-do-code-formatting)
 - [How you can improve the readability of code?](#how-you-can-improve-the-readability-of-code)
@@ -37,6 +38,13 @@ https://docs.dhiwise.com/docs/Designguidelines/intro
 ### App Navigations
 
 Check your app's UI from the AppNavigation screen of your app.
+
+### Google Authentication Configuration
+
+Steps:
+- Follow the steps on https://pub.dev/packages/google_sign_in for Google sign-in.
+- For iOS:
+    - Download the GoogleService-Info.plist  file. Drag and drop the downloaded file into the Runner subfolder and update Info.plist  file.
 
 ### Project Structure
 

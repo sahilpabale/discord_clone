@@ -24,13 +24,15 @@ flutter:
   fonts: 
     - family: Manrope
       fonts: 
-        - asset: assets/fonts/ManropeExtraBold.ttf
-          weight: 800
-        - asset: assets/fonts/ManropeRegular.ttf
-          weight: 400
         - asset: assets/fonts/ManropeBold.ttf
           weight: 700
         - asset: assets/fonts/ManropeMedium.ttf
           weight: 500
         - asset: assets/fonts/ManropeSemiBold.ttf
           weight: 600
+    - family: Noto Sans
+      fonts: 
+        - asset: assets/fonts/NotoSansExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSansRegular.ttf
+          weight: 400

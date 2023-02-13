@@ -50,6 +50,43 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                               children: [
                                 GestureDetector(
                                     onTap: () {
+                                      onTapExp4forms();
+                                    },
+                                    child: Container(
+                                        width: getHorizontalSize(375.00),
+                                        decoration: AppDecoration.fillWhiteA700,
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Padding(
+                                                      padding: getPadding(
+                                                          left: 20,
+                                                          top: 10,
+                                                          right: 20,
+                                                          bottom: 10),
+                                                      child: Text(
+                                                          "lbl_exp_4_forms".tr,
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: AppStyle
+                                                              .txtRobotoRegular20))),
+                                              Container(
+                                                  height: getVerticalSize(1.00),
+                                                  width:
+                                                      getHorizontalSize(375.00),
+                                                  margin: getMargin(top: 5),
+                                                  decoration: BoxDecoration(
+                                                      color: ColorConstant
+                                                          .bluegray400))
+                                            ]))),
+                                GestureDetector(
+                                    onTap: () {
                                       onTapExpTwo();
                                     },
                                     child: Container(
@@ -87,7 +124,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                             ]))),
                                 GestureDetector(
                                     onTap: () {
-                                      onTapExp4forms();
+                                      onTapExp5nav();
                                     },
                                     child: Container(
                                         width: getHorizontalSize(375.00),
@@ -106,7 +143,45 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                           right: 20,
                                                           bottom: 10),
                                                       child: Text(
-                                                          "lbl_exp_4_forms".tr,
+                                                          "lbl_exp_5_nav".tr,
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          textAlign:
+                                                              TextAlign.center,
+                                                          style: AppStyle
+                                                              .txtRobotoRegular20))),
+                                              Container(
+                                                  height: getVerticalSize(1.00),
+                                                  width:
+                                                      getHorizontalSize(375.00),
+                                                  margin: getMargin(top: 5),
+                                                  decoration: BoxDecoration(
+                                                      color: ColorConstant
+                                                          .bluegray400))
+                                            ]))),
+                                GestureDetector(
+                                    onTap: () {
+                                      onTapExp6googlelogin();
+                                    },
+                                    child: Container(
+                                        width: getHorizontalSize(375.00),
+                                        decoration: AppDecoration.fillWhiteA700,
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Align(
+                                                  alignment:
+                                                      Alignment.centerLeft,
+                                                  child: Padding(
+                                                      padding: getPadding(
+                                                          left: 20,
+                                                          top: 10,
+                                                          right: 20,
+                                                          bottom: 10),
+                                                      child: Text(
+                                                          "msg_exp_6_google_login"
+                                                              .tr,
                                                           overflow: TextOverflow
                                                               .ellipsis,
                                                           textAlign:
@@ -126,11 +201,19 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
             ])));
   }
 
+  onTapExp4forms() {
+    Get.toNamed(AppRoutes.exp4FormsScreen);
+  }
+
   onTapExpTwo() {
     Get.toNamed(AppRoutes.expTwoScreen);
   }
 
-  onTapExp4forms() {
-    Get.toNamed(AppRoutes.exp4FormsScreen);
+  onTapExp5nav() {
+    Get.toNamed(AppRoutes.exp5NavScreen);
+  }
+
+  onTapExp6googlelogin() {
+    Get.toNamed(AppRoutes.exp6GoogleLoginScreen);
   }
 }

@@ -78,7 +78,8 @@ class Exp4FormsScreen extends GetWidget<Exp4FormsController> {
                                   height: 44,
                                   width: 312,
                                   text: "lbl_create_server".tr,
-                                  margin: getMargin(top: 24))
+                                  margin: getMargin(top: 24),
+                                  onTap: onTapCreateserver)
                             ])))),
             bottomNavigationBar: Padding(
                 padding: getPadding(left: 24, right: 24, bottom: 52),
@@ -95,5 +96,9 @@ class Exp4FormsScreen extends GetWidget<Exp4FormsController> {
 
   onTapImgClose() {
     Get.back();
+  }
+
+  onTapCreateserver() {
+    Get.toNamed(AppRoutes.exp5NavScreen);
   }
 }

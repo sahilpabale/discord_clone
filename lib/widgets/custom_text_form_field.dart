@@ -112,7 +112,7 @@ class CustomTextFormField extends StatelessWidget {
     switch (fontStyle) {
       default:
         return TextStyle(
-          color: ColorConstant.gray500,
+          color: ColorConstant.gray50001,
           fontSize: getFontSize(
             14,
           ),
@@ -148,7 +148,7 @@ class CustomTextFormField extends StatelessWidget {
   _setFillColor() {
     switch (variant) {
       default:
-        return ColorConstant.gray90001;
+        return ColorConstant.gray900;
     }
   }
 
@@ -186,9 +186,9 @@ enum TextFormFieldPadding {
 
 enum TextFormFieldVariant {
   None,
-  FillGray90001,
+  FillGray900,
 }
 
 enum TextFormFieldFontStyle {
-  ManropeMedium14,
+  ManropeMedium14Gray50001,
 }

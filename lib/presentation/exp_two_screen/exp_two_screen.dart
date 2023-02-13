@@ -11,366 +11,384 @@ class ExpTwoScreen extends GetWidget<ExpTwoController> {
       child: Scaffold(
         backgroundColor: ColorConstant.whiteA700,
         body: Container(
-          height: size.height,
           width: size.width,
-          child: Stack(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Align(
-                alignment: Alignment.center,
+              Expanded(
                 child: SingleChildScrollView(
                   child: Container(
-                    height: size.height,
                     width: size.width,
-                    child: Stack(
-                      alignment: Alignment.topCenter,
+                    decoration: AppDecoration.fillBluegray900,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Container(
-                            width: size.width,
-                            padding: getPadding(
-                              left: 14,
-                              top: 59,
-                              right: 14,
-                              bottom: 59,
-                            ),
-                            decoration: AppDecoration.fillBluegray900,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: getPadding(
-                                    left: 2,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgUser,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          top: 3,
-                                          bottom: 3,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: getPadding(
-                                          left: 8,
-                                        ),
-                                        child: Text(
-                                          "lbl_set_status".tr,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle.txtManropeRegular15,
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgBookmark,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          top: 3,
-                                          bottom: 3,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: getPadding(
-                                          left: 8,
-                                        ),
-                                        child: Text(
-                                          "lbl_do_not_disturb".tr,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle.txtManropeRegular15,
-                                        ),
-                                      ),
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgArrowright,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          left: 8,
-                                          top: 3,
-                                          bottom: 3,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: getPadding(
-                                    left: 2,
-                                    top: 31,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgUserGray600,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          top: 3,
-                                          bottom: 3,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: getPadding(
-                                          left: 8,
-                                        ),
-                                        child: Text(
-                                          "lbl_account".tr,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle.txtManropeRegular15,
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgArrowright,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          top: 3,
-                                          bottom: 3,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: getPadding(
-                                    left: 2,
-                                    top: 30,
-                                    bottom: 401,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgEdit,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          top: 2,
-                                          bottom: 4,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: getPadding(
-                                          left: 8,
-                                        ),
-                                        child: Text(
-                                          "lbl_profiles".tr,
-                                          overflow: TextOverflow.ellipsis,
-                                          textAlign: TextAlign.left,
-                                          style: AppStyle.txtManropeRegular15,
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      CustomImageView(
-                                        svgPath: ImageConstant.imgArrowright,
-                                        height: getSize(
-                                          14.00,
-                                        ),
-                                        width: getSize(
-                                          14.00,
-                                        ),
-                                        margin: getMargin(
-                                          top: 3,
-                                          bottom: 3,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
+                        Container(
+                          width: size.width,
+                          padding: getPadding(
+                            left: 19,
+                            top: 13,
+                            right: 19,
+                            bottom: 13,
                           ),
-                        ),
-                        Align(
-                          alignment: Alignment.topCenter,
-                          child: Container(
-                            height: getVerticalSize(
-                              164.00,
-                            ),
-                            width: size.width,
-                            decoration: BoxDecoration(
-                              color: ColorConstant.red500,
-                            ),
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment.topCenter,
-                          child: Container(
-                            width: size.width,
-                            margin: getMargin(
-                              top: 94,
-                              bottom: 628,
-                            ),
-                            padding: getPadding(
-                              left: 19,
-                              top: 12,
-                              right: 19,
-                              bottom: 12,
-                            ),
-                            decoration: AppDecoration.fillBlack900,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Padding(
-                                  padding: getPadding(
-                                    top: 24,
-                                  ),
-                                  child: Text(
-                                    "lbl_sahilpabale".tr,
-                                    overflow: TextOverflow.ellipsis,
-                                    textAlign: TextAlign.left,
-                                    style: AppStyle.txtManropeExtraBold20,
-                                  ),
+                          decoration: AppDecoration.fillBlack900,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                height: getVerticalSize(
+                                  61.00,
                                 ),
-                                Padding(
-                                  padding: getPadding(
-                                    left: 4,
-                                    top: 21,
-                                    bottom: 2,
-                                  ),
-                                  child: Text(
-                                    "lbl_8371".tr,
-                                    overflow: TextOverflow.ellipsis,
-                                    textAlign: TextAlign.left,
-                                    style: AppStyle.txtManropeRegular20,
-                                  ),
+                                width: getHorizontalSize(
+                                  62.00,
                                 ),
-                                Spacer(),
-                                CustomImageView(
-                                  svgPath: ImageConstant.imgAirplane,
-                                  height: getVerticalSize(
-                                    14.00,
-                                  ),
-                                  width: getHorizontalSize(
-                                    15.00,
-                                  ),
-                                  margin: getMargin(
-                                    top: 29,
-                                    bottom: 9,
-                                  ),
+                                margin: getMargin(
+                                  left: 6,
+                                  top: 45,
                                 ),
-                                CustomImageView(
-                                  svgPath: ImageConstant.imgCamera,
-                                  height: getVerticalSize(
-                                    12.00,
-                                  ),
-                                  width: getHorizontalSize(
-                                    17.00,
-                                  ),
-                                  margin: getMargin(
-                                    left: 8,
-                                    top: 31,
-                                    right: 7,
-                                    bottom: 9,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Align(
-                          alignment: Alignment.topLeft,
-                          child: Container(
-                            height: getVerticalSize(
-                              61.00,
-                            ),
-                            width: getHorizontalSize(
-                              62.00,
-                            ),
-                            margin: getMargin(
-                              left: 25,
-                              top: 59,
-                            ),
-                            child: Stack(
-                              alignment: Alignment.bottomRight,
-                              children: [
-                                CustomImageView(
-                                  imagePath: ImageConstant.imgEllipse1,
-                                  height: getVerticalSize(
-                                    61.00,
-                                  ),
-                                  width: getHorizontalSize(
-                                    62.00,
-                                  ),
-                                  radius: BorderRadius.circular(
-                                    getHorizontalSize(
-                                      31.00,
-                                    ),
-                                  ),
-                                  alignment: Alignment.center,
-                                ),
-                                Align(
+                                child: Stack(
                                   alignment: Alignment.bottomRight,
-                                  child: Container(
-                                    width: getHorizontalSize(
-                                      20.00,
+                                  children: [
+                                    CustomImageView(
+                                      imagePath: ImageConstant.imgEllipse1,
+                                      height: getVerticalSize(
+                                        61.00,
+                                      ),
+                                      width: getHorizontalSize(
+                                        62.00,
+                                      ),
+                                      radius: BorderRadius.circular(
+                                        getHorizontalSize(
+                                          31.00,
+                                        ),
+                                      ),
+                                      alignment: Alignment.center,
                                     ),
-                                    padding: getPadding(
-                                      all: 3,
-                                    ),
-                                    decoration:
-                                        AppDecoration.fillGray900.copyWith(
-                                      borderRadius:
-                                          BorderRadiusStyle.circleBorder10,
-                                    ),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          height: getSize(
-                                            12.00,
-                                          ),
-                                          width: getSize(
-                                            12.00,
-                                          ),
-                                          decoration: BoxDecoration(
-                                            color: ColorConstant.green600,
-                                            borderRadius: BorderRadius.circular(
-                                              getHorizontalSize(
-                                                6.00,
+                                    Align(
+                                      alignment: Alignment.bottomRight,
+                                      child: Container(
+                                        width: getHorizontalSize(
+                                          20.00,
+                                        ),
+                                        padding: getPadding(
+                                          all: 3,
+                                        ),
+                                        decoration: AppDecoration.fillGray90001
+                                            .copyWith(
+                                          borderRadius:
+                                              BorderRadiusStyle.circleBorder10,
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              height: getSize(
+                                                12.00,
+                                              ),
+                                              width: getSize(
+                                                12.00,
+                                              ),
+                                              decoration: BoxDecoration(
+                                                color: ColorConstant.green600,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                  getHorizontalSize(
+                                                    6.00,
+                                                  ),
+                                                ),
                                               ),
                                             ),
-                                          ),
+                                          ],
                                         ),
-                                      ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: getPadding(
+                                  top: 8,
+                                  right: 7,
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: getPadding(
+                                        top: 1,
+                                      ),
+                                      child: Text(
+                                        "lbl_sahilpabale".tr,
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.left,
+                                        style: AppStyle.txtNotoSansExtraBold20,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: getPadding(
+                                        left: 2,
+                                        bottom: 1,
+                                      ),
+                                      child: Text(
+                                        "lbl_8371".tr,
+                                        overflow: TextOverflow.ellipsis,
+                                        textAlign: TextAlign.left,
+                                        style: AppStyle.txtNotoSansRegular20,
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    CustomImageView(
+                                      svgPath: ImageConstant.imgAirplane,
+                                      height: getVerticalSize(
+                                        14.00,
+                                      ),
+                                      width: getHorizontalSize(
+                                        15.00,
+                                      ),
+                                      margin: getMargin(
+                                        top: 7,
+                                        bottom: 8,
+                                      ),
+                                    ),
+                                    CustomImageView(
+                                      svgPath: ImageConstant.imgCamera,
+                                      height: getVerticalSize(
+                                        12.00,
+                                      ),
+                                      width: getHorizontalSize(
+                                        17.00,
+                                      ),
+                                      margin: getMargin(
+                                        left: 8,
+                                        top: 9,
+                                        bottom: 8,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: getPadding(
+                            left: 16,
+                            top: 44,
+                            right: 14,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CustomImageView(
+                                svgPath: ImageConstant.imgUser,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  top: 4,
+                                  bottom: 3,
+                                ),
+                              ),
+                              Padding(
+                                padding: getPadding(
+                                  left: 8,
+                                ),
+                                child: Text(
+                                  "lbl_set_status".tr,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.left,
+                                  style: AppStyle.txtNotoSansRegular15,
+                                ),
+                              ),
+                              Spacer(),
+                              CustomImageView(
+                                svgPath: ImageConstant.imgBookmark,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  top: 4,
+                                  bottom: 3,
+                                ),
+                              ),
+                              Padding(
+                                padding: getPadding(
+                                  left: 8,
+                                ),
+                                child: Text(
+                                  "lbl_do_not_disturb".tr,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.left,
+                                  style: AppStyle.txtNotoSansRegular15,
+                                ),
+                              ),
+                              CustomImageView(
+                                svgPath: ImageConstant.imgArrowright,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  left: 3,
+                                  top: 4,
+                                  bottom: 3,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: getPadding(
+                            left: 16,
+                            top: 31,
+                            right: 14,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CustomImageView(
+                                svgPath: ImageConstant.imgUserGray600,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  top: 3,
+                                  bottom: 3,
+                                ),
+                              ),
+                              Padding(
+                                padding: getPadding(
+                                  left: 8,
+                                ),
+                                child: Text(
+                                  "lbl_account".tr,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.left,
+                                  style: AppStyle.txtNotoSansRegular15,
+                                ),
+                              ),
+                              Spacer(),
+                              CustomImageView(
+                                svgPath: ImageConstant.imgArrowright,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  top: 3,
+                                  bottom: 3,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: getPadding(
+                            left: 16,
+                            top: 30,
+                            right: 14,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CustomImageView(
+                                svgPath: ImageConstant.imgEdit,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  top: 3,
+                                  bottom: 3,
+                                ),
+                              ),
+                              Padding(
+                                padding: getPadding(
+                                  left: 8,
+                                ),
+                                child: Text(
+                                  "lbl_profiles".tr,
+                                  overflow: TextOverflow.ellipsis,
+                                  textAlign: TextAlign.left,
+                                  style: AppStyle.txtNotoSansRegular15,
+                                ),
+                              ),
+                              Spacer(),
+                              CustomImageView(
+                                svgPath: ImageConstant.imgArrowright,
+                                height: getSize(
+                                  14.00,
+                                ),
+                                width: getSize(
+                                  14.00,
+                                ),
+                                margin: getMargin(
+                                  top: 4,
+                                  bottom: 2,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            height: getVerticalSize(
+                              186.00,
+                            ),
+                            width: getHorizontalSize(
+                              312.00,
+                            ),
+                            margin: getMargin(
+                              left: 16,
+                              top: 240,
+                              bottom: 32,
+                            ),
+                            child: Stack(
+                              alignment: Alignment.centerRight,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    width: getHorizontalSize(
+                                      181.00,
+                                    ),
+                                    child: Text(
+                                      "msg_unleash_more_fun".tr,
+                                      maxLines: null,
+                                      textAlign: TextAlign.left,
+                                      style: AppStyle.txtNotoSansExtraBold20,
                                     ),
                                   ),
+                                ),
+                                CustomImageView(
+                                  imagePath: ImageConstant.imgNitroridersvg,
+                                  height: getVerticalSize(
+                                    186.00,
+                                  ),
+                                  width: getHorizontalSize(
+                                    161.00,
+                                  ),
+                                  alignment: Alignment.centerRight,
                                 ),
                               ],
                             ),
