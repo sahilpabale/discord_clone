@@ -3,6 +3,7 @@ import 'package:discord_app/core/app_export.dart';
 import 'package:discord_app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:discord_app/domain/googleauth/google_auth_helper.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Exp6GoogleLoginScreen extends GetWidget<Exp6GoogleLoginController> {
   @override
@@ -34,7 +35,7 @@ class Exp6GoogleLoginScreen extends GetWidget<Exp6GoogleLoginController> {
                           width: 312,
                           text: "msg_login_with_google".tr,
                           margin: getMargin(top: 85),
-                          onTap: onTapLoginwithgoogleOne),
+                          onTap: signInUsingGoogle),
                       CustomButton(
                           height: 44,
                           width: 312,
@@ -47,16 +48,27 @@ class Exp6GoogleLoginScreen extends GetWidget<Exp6GoogleLoginController> {
                     ]))));
   }
 
-  onTapLoginwithgoogleOne() async {
+  signInUsingGoogle() async {
     await GoogleAuthHelper().googleSignInProcess().then((googleUser) {
       if (googleUser != null) {
-        //TODO Actions to be performed after signin
+        onSuccessGoogleAuthResponse(googleUser);
       } else {
-        Get.snackbar('Error', 'user data is empty');
+        onErrorGoogleAuthResponse();
       }
     }).catchError((onError) {
-      Get.snackbar('Error', onError.toString());
+      onErrorGoogleAuthResponse();
     });
+  }
+
+  onSuccessGoogleAuthResponse(GoogleSignInAccount googleUser) {
+    Get.toNamed(AppRoutes.expTwoScreen);
+  }
+
+  onErrorGoogleAuthResponse() {
+    Get.defaultDialog(
+        onConfirm: () => Get.back(),
+        title: "Failed to Login!",
+        middleText: "Please try to login again with google.");
   }
 
   onTapLoginwithtwitter() {
